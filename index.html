@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LuvEat</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-image: url('https://imgs.search.brave.com/AwiwibhD-kCYHWZyhrmbdPQatQYxnZUTZK2K1nmPAKU/rs:fit:860:0:0/g:ce/aHR0cHM6Ly9pLnBp/bmltZy5jb20vb3Jp/Z2luYWxzLzkxLzI0/LzUxLzkxMjQ1MWFm/ZmE1ZWFjYjE1MjFm/M2MxN2EzMzgzMmE2/LmpwZw');
+            background-size: cover;
+            background-repeat: no-repeat; 
+            background-attachment: fixed;
+        }
+        .header {
+            background-color: rgb(225, 144, 73);
+            height: 72px;
+            margin-bottom: 5px;
+            margin-top: -8px;
+            margin-left: -8px;
+            margin-right: -8px;
+            display: flex;
+            align-items: center;
+            padding: 0 20px;
+        }
+        .header img {
+            height: 66px;
+            width: 124px;
+            margin-right: 20px;
+        }
+        .header h1 {
+            color: white;
+            font-size: 2rem;
+            margin-left: auto;
+        }
+        .navbar-nav .nav-link {
+            color: white !important;
+            font-weight: 500;
+        }
+        .navbar-nav .nav-link:hover {
+            color: #eb9c5b !important;
+        }
+        .search-bar {
+            padding: 20px;
+        }
+        .categories h1 {
+            font-weight: 600;
+            font-family: 'Titillium Web', sans-serif;
+            font-size: 36px;
+            line-height: 40px;
+            text-align: center;
+            color: #355681;
+            background: #eb9c5b;
+            border-radius: 0 10px 0 10px;
+            display: inline-block;
+            padding: 15px;
+            margin: 40px auto;
+        }
+        .intro {
+            background-color: rgba(210, 105, 30, 0.8);
+            padding: 25px;
+            font-family: "Times New Roman", Times, serif;
+            font-size: larger;
+            color: white;
+            border-radius: 10px;
+            margin: 50px auto;
+            width: 80%;
+        }
+        .choice {
+            background-color: rgb(226, 185, 134);
+            margin: 15px auto;
+            margin-top: 50px;
+            width: 80%;
+            height: auto;
+            text-align: center;
+            padding: 40px 20px;
+            border-radius: 10px;
+        }
+        .choice h2 {
+            margin-bottom: 30px;
+        }
+        .choice .btn {
+            margin: 10px;
+        }
+        .vol {
+            background-color: rgba(235, 156, 91, 0.9);
+            padding: 40px;
+            text-align: center;
+            font-size: 25px;
+            color: white;
+            border-radius: 10px;
+            margin: 50px auto;
+            width: 80%;
+        }
+        .gallery img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+        .info-bar {
+            background-color: #333;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+            margin-top: 50px;
+        }
+        .info-bar a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 10px;
+            font-size: 18px;
+        }
+        .info-bar a:hover {
+            color: #eb9c5b;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <div class="header">
+        <img src="logo.png" alt="LuvEat Logo">
+        <h1>LuvEat</h1>
+    </div>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: rgba(193, 116, 7, 0.833);">
+        <div class="container-fluid">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" 
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">HOME</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">ABOUT</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">SERVICES</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">EVENTS</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">CONTACT</a>
+                    </li>
+                </ul>
+                <button class="btn btn-warning">LOG OUT</button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Search Bar -->
+    <div class="container search-bar">
+        <div class="input-group">
+            <input type="text" class="form-control" placeholder="Search">
+            <button class="btn btn-warning" type="button">Search</button>
+        </div>
+    </div>
+
+    <!-- Categories -->
+    <div class="container">
+        <h1 class="categories">UPCOMING EVENTS</h1>
+    </div>
+
+    <!-- Slideshow (Bootstrap Carousel) -->
+    <div id="eventCarousel" class="carousel slide container" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <a href="#">
+                    <img src="https://imgs.search.brave.com/RQXoHdqWNqZ3tDSAwWybMCAAjfNGBDDDbiC4-gHLl9w/rs:fit:860:0:0/g:ce/aHR0cHM6Ly9tYXJr/ZXRwbGFjZS5jYW52/YS5jb20vRUFEYW9F/bGY0WHcvMS8wLzU2/NncvY2FudmEtZ3Jl/ZW4td2hpdGUtaWxs/dXN0cmF0ZWQtcmVj/eWNsaW5nLXBvc3Rl/ci1QSEhPdXV3aV9h/QS5qcGc" class="d-block w-100" alt="Event 1">
+                </a>
+            </div>
+            <div class="carousel-item">
+                <a href="#">
+                    <img src="https://imgs.search.brave.com/m2iA9MTMu-9ScCXZBmTNamv4Ui4sU0puCPFp7mBoERQ/rs:fit:860:0:0/g:ce/aHR0cHM6Ly9pLnBp/bmltZy5jb20vb3Jp/Z2luYWxzL2IxLzNj/Lzc3L2IxM2M3NzQ0/YTM2MjgzNGUzNzU1/OGUyNGY0YTA5ODU1/LmpwZw" class="d-block w-100" alt="Event 2">
+                </a>
+            </div>
+            <div class="carousel-item">
+                <a href="#">
+                    <img src="https://imgs.search.brave.com/gPb69BExNOMEORXslijIa_plglP6R6SnuYCeBbBQta0/rs:fit:860:0:0/g:ce/aHR0cHM6Ly9kMWNz/YXJrejhvYmU5dS5j/bG91ZGZyb250Lm5l/dC9wb3N0ZXJwcmV2/aWV3cy9jb3ZpZC0x/OS1mb29kLWJhbmst/ZG9uYXRpb24tZGVz/aWduLXRlbXBsYXRl/LTg4ZDBlNWU2ZGQ3/OWQ3ZmQwZTUxZTdk/NTFkMDI0YTIxLmpw/Zz90cz0xNjk4NDU0/MDUw" class="d-block w-100" alt="Event 3">
+                </a>
+            </div>
+            <!-- Add more carousel items as needed -->
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#eventCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#eventCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+
+    <!-- Choice Section -->
+    <div class="choice container">
+        <h2>What Are You?</h2>
+        <div class="d-flex justify-content-center">
+            <button class="btn btn-primary">DONOR</button>
+            <button class="btn btn-success">CONSUMER</button>
+        </div>
+    </div>
+
+    <!-- Introduction -->
+    <div class="intro container">
+        <p class="intro1">HELLO,</p>
+        <p>
+            Welcome to LuvEat, where compassion meets hunger. Our food donation website is a beacon of hope, connecting generous hearts with those in need. At LuvEat, we believe in the power of collective kindness to combat food insecurity. Whether you're a donor with surplus provisions or an organization seeking support, our platform seamlessly bridges the gap. Join us in creating a world where no one goes to bed hungry. Together, we can make a difference, one meal at a time. LuvEat: Linking generosity to hunger, and fostering a community where everyone has access to wholesome meals.
+        </p>
+    </div>
+
+    <!-- Volunteer Section -->
+    <div class="vol container">
+        <h2>Wanna Join Us as a Volunteer?</h2>
+        <button class="btn btn-warning">Join as Volunteer</button>
+    </div>
+
+    <!-- Gallery -->
+    <div class="gallery container">
+        <h2 class="text-center mb-4">GALLERY</h2>
+        <div class="row">
+            <div class="col-md-4">
+                <img src="https://imgs.search.brave.com/NiYI0GGoMpQCFuF1CVKsQgcBm6b9t1h9B1dp8uH_1T0/rs:fit:860:0:0/g:ce/aHR0cHM6Ly9wbHVz/LnVuc3BsYXNoLmNv/bS9wcmVtaXVtX3Bo/b3RvLTE2ODMxMzQw/NDQwNzctYzhhZjRj/NzUyYzVmP3E9ODAm/dz0xMDAwJmF1dG89/Zm9ybWF0JmZpdD1j/cm9wJml4bGliPXJi/LTQuMC4zJml4aWQ9/TTN3eE1qQTNmREI4/TUh4elpXRnlZMmg4/T1h4OGRtOXNkVzUw/WldWeWZHVnVmREI4/ZkRCOGZId3c" alt="Gallery Image 1" class="img-fluid mb-3">
+            </div>
+            <div class="col-md-4">
+                <img src="https://imgs.search.brave.com/xRvQkViTst8oq4oP6xFOETwMbR8gIMvtw-AQzYF9Crc/rs:fit:860:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5nZXR0eWltYWdl/cy5jb20vaWQvMTQy/NTU2MjUzMC9waG90/by9kaXZlcnNlLWdy/b3VwLW9mLXZvbHVu/dGVlcnMtd29ya2lu/Zy1hdC10aGUtd2Fy/ZWhvdXNlLmpwZz9z/PTYxMng2MTImdz0w/Jms9MjAmYz1qVnNT/NWtHZENEWW5EdjBS/UnRQU3EtZFlRYWRY/SlFORWZnTDQwNi13/T2lJPQ" alt="Gallery Image 2" class="img-fluid mb-3">
+            </div>
+            <div class="col-md-4">
+                <img src="https://imgs.search.brave.com/dLY7Wj2cDwMaiCfv8bafhUs3j81cPSsmOGQ8JCb9-vw/rs:fit:860:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5nZXR0eWltYWdl/cy5jb20vaWQvNTMz/NzY4ODk1L3Bob3Rv/L3ZvbHVudGVlcnMt/cGFzc2luZy1jYXJk/Ym9hcmQtYm94ZXMt/ZnJvbS1kZWxpdmVy/eS12YW4uanBnP3M9/NjEyeDYxMiZ3PTAm/az0yMCZjPWpKdE9x/Wl9yU2JKajVEWTdJ/UmFTeXRlUUpBUTV6/VWxtQlNUTm91SDg0/ZnM9" alt="Gallery Image 3" class="img-fluid mb-3">
+            </div>
+            <!-- Add more images as needed -->
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="info-bar">
+        <div class="container">
+            <div class="d-flex justify-content-center mb-3">
+                <a href="https://www.instagram.com/your_instagram_handle" target="_blank">Instagram</a>
+                <a href="https://twitter.com/your_twitter_handle" target="_blank">Twitter</a>
+            </div>
+            <div>
+                <p>Phone: +123456789</p>
+                <p>Email: your@email.com</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS and dependencies (Popper.js) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Optional: Remove the following script if using Bootstrap Carousel -->
+    <!--
+    <script>
+        let slideIndex = 0;
+        showSlides();
+
+        function showSlides() {
+            let slides = document.getElementsByClassName("slide");
+            for (let i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) {
+                slideIndex = 1;
+            }
+            slides[slideIndex - 1].style.display = "block";
+            setTimeout(showSlides, 5000); // Change slide every 5 seconds
+        }
+    </script>
+    -->
+</body>
+</html>
